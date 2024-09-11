@@ -13,6 +13,10 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+app.use(cors({
+  origin: 'https://test-rws7.onrender.com/'  // Replace with your frontend domain (React app URL)
+}));
+
 // middleware function
 const logrequrest = (req,res,next)=>{
 console.log(`${new Date().toLocaleString()} Request mode to :${req.originalUrl} `)
