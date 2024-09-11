@@ -80,7 +80,7 @@ app.use('/person',logrequrest, personRoutes);
 
 console.log("I am here");
 
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 3001
 
 console.log(PORT)
 app.listen(PORT, () => {
