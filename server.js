@@ -11,7 +11,7 @@ const bcrypt = require('bcrypt');
 app.use(bodyParser.json());
 
 
-
+app.use(cors());
 
 // middleware function
 const logrequrest = (req,res,next)=>{
