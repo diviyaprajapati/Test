@@ -8,7 +8,7 @@ const EventEmitter = require('events');
 const eventEmitter = new EventEmitter();
 
 // POST /person
-router.post('/', async (req, res) => {
+router.post('/',cors() ,async (req, res) => {
   try {
     const data = req.body;
     const newPerson = new person(data);
@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
 
 let persons = []; // Declare persons globally, outside the route
 
- router.get('/', async (req, res ,next) => {
+ router.get('/',cors(), async (req, res ,next) => {
   try {
     persons = await person.find();
     res.status(200).json(persons);
@@ -38,7 +38,7 @@ let persons = []; // Declare persons globally, outside the route
 
 
 
-router.put('/:id', async (req, res) => {
+router.put('/:id',cors(), async (req, res) => {
   try {
     const id = req.params.id;
     const data = req.body;
@@ -60,7 +60,7 @@ router.put('/:id', async (req, res) => {
 });
 
 
-router.delete('/:id',async(req,res) => {
+router.delete('/:id',cors(),async(req,res) => {
   try {
 const personid = req.params.id;
 
