@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use(cors({
-  origin: 'https://test-rws7.onrender.com/'  // Replace with your frontend domain (React app URL)
+  origin: 'https://test-rws7.onrender.com'  // Replace with your frontend domain (React app URL)
 }));
 
 // middleware function
